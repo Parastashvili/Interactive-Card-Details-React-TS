@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+:root {
+  --name: 00FFFFFF;
+  --cardNum: 00FFFFFF;
+  --month: 00FFFFFF;
+  --year: 00FFFFFF;
+  --cvc: 00FFFFFF;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.outerCont {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  width: 100vw;
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  width: 100%;
+  height: 240px;
+  background-image: url(./asset/images/bg-main-mobile.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  user-select: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cardContainer {
+  width: 375px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0px 39px 60px rgba(0, 0, 0, 0.142481));
+}
+.cardSize {
+  max-width: 286px;
+  height: 157px;
+  display: flex;
+  position: absolute;
+}
+.cardBack {
+  top: 32px;
+  right: 16px;
+}
+.cardFront {
+  top: 126px;
+  left: 16px;
+}
+.cardLogo {
+  width: 55px;
+  position: absolute;
+  top: 144px;
+  left: 36px;
+}
+.cvcNumber {
+  font-size: 9px;
+  line-height: 11px;
+  text-align: right;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  top: 104px;
+  right: 50px;
+}
+.cardNumber {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 2.2px;
+  color: #ffffff;
+  position: absolute;
+  top: 211px;
+  left: 36px;
+}
+.cardNameDateCont {
+  display: flex;
+}
+.cardNameDate {
+  font-size: 9px;
+  line-height: 11px;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  top: 251px;
+}
+.cardName {
+  left: 36px;
+}
+.cardDate {
+  left: 250px;
+}
+.inputContOuter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 67px;
+  padding: 24px;
+}
+.inputContInner {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.cardDetail {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #21092f;
+  min-width: 73px;
+}
+input {
+  cursor: pointer;
+}
+.inputNameNumber {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #21092f;
+  mix-blend-mode: normal;
+  border: 1px solid #dfdee0;
+  border-radius: 8px;
+  padding: 10px;
+}
+#cardName {
+  outline: 1px solid var(--name);
+}
+#cardNumber {
+  outline: 1px solid var(--cardNum);
+}
+#month {
+  outline: 1px solid var(--month);
+}
+#year {
+  outline: 1px solid var(--year);
+}
+#cvc {
+  outline: 1px solid var(--cvc);
+}
+input::placeholder {
+  opacity: 0.25;
+}
+.inputContInnerB {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 11px;
+}
+.bottomInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  width: 100%;
+  gap: 8px;
+}
+.addition{
+    width: calc(100% - 24px);
+    margin-top: 9px;
+}
+.buttonCont {
+  padding: 4px 24px;
+}
+.createBTN {
+  background: #21092f;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  width: 100%;
+  height: 53px;
+  cursor: pointer;
+  user-select: none;
+}
+.confirmation {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 91px;
 }
-
-.App-link {
-  color: #61dafb;
+.thankTxt1 {
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 3.42222px;
+  color: #21092f;
+  margin-top: 35px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.thankTxt2 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #8f8694;
+  margin-top: 16px;
+}
+.restart {
+  margin-top: 48px;
+  padding: 15px 24px;
+  width: calc(100% - 24px);
+  background: #21092f;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
 }
