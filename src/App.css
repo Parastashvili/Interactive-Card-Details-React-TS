@@ -227,22 +227,66 @@ input::placeholder {
   .outerCont {
     display: flex;
     align-items: center;
+    padding: 0px;
   }
   .header {
-    width: 483px;
+    width: 484px;
     height: 100%;
+  }
+  .cardContainer {
+    width: 100%;
+    margin-right: -484px;
   }
   .cardBack {
     top: calc(50% + 40px);
-    left: 288px;
+    left: 16px;
   }
   .cardFront {
-    top: calc(50% - 140px);
-    left: 214px;
+    top: calc(50% - 240px);
+    left: -78px;
   }
   .inputContOuter,
   .buttonCont {
     max-width: 381px;
-    margin-left: 250px;
+    margin-left: 350px;
+  }
+  .cardSize {
+    max-width: 447px;
+    height: 245px;
+  }
+  .cardLogo {
+    width: 75px;
+    top: calc(50% - 210px);
+    left: -40px;
+  }
+  .cvcNumber {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    top: calc(50% + 150px);
+    right: 80px;
+  }
+  .cardNumber {
+    width: 100%;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 3.42222px;
+    top: calc(50% - 80px);
+    left: -40px;
+  }
+  .cardNameDate {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    top: calc(50% - 30px);
+  }
+  .cardName {
+    left: -40px;
+  }
+  .cardDate {
+    left: 290px;
+  }
+  .confirmation {
+    margin-left: 400px;
   }
 }
