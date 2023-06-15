@@ -122,6 +122,26 @@ input {
   border-radius: 8px;
   padding: 10px;
 }
+.warningText {
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff5050;
+}
+#nameWarning {
+  display: none;
+}
+#numberWarning {
+  display: none;
+}
+#monthWarning {
+  display: none;
+}
+#yearWarning {
+  display: none;
+}
+#cvcWarning {
+  display: none;
+}
 #cardName {
   outline: 1px solid var(--name);
 }
@@ -152,9 +172,9 @@ input::placeholder {
   width: 100%;
   gap: 8px;
 }
-.addition{
-    width: calc(100% - 24px);
-    margin-top: 9px;
+.addition {
+  width: calc(100% - 24px);
+  margin: 9px 0px;
 }
 .buttonCont {
   padding: 4px 24px;
@@ -202,4 +222,27 @@ input::placeholder {
   font-size: 18px;
   line-height: 23px;
   color: #ffffff;
+}
+@media (min-width: 1440px) {
+  .outerCont {
+    display: flex;
+    align-items: center;
+  }
+  .header {
+    width: 483px;
+    height: 100%;
+  }
+  .cardBack {
+    top: calc(50% + 40px);
+    left: 288px;
+  }
+  .cardFront {
+    top: calc(50% - 140px);
+    left: 214px;
+  }
+  .inputContOuter,
+  .buttonCont {
+    max-width: 381px;
+    margin-left: 250px;
+  }
 }

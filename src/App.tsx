@@ -141,6 +141,9 @@ function App(): JSX.Element {
                 type="text"
                 placeholder="e.g. Jane Appleseed"
               />
+              <p id="nameWarning" className="warningText">
+                Can’t be blank
+              </p>
             </div>
             <div className="inputContInner">
               <h5 className="cardDetail">Card Number</h5>
@@ -153,6 +156,9 @@ function App(): JSX.Element {
                 maxLength={16}
                 placeholder="e.g. 1234 5678 9123 0000"
               />
+              <p id="numberWarning" className="warningText">
+                Check format, only 16 digit number
+              </p>
             </div>
             <div className="inputContInnerB">
               <div className="bottomInner">
@@ -167,6 +173,9 @@ function App(): JSX.Element {
                     max={12}
                     placeholder="MM"
                   />
+                  <p id="monthWarning" className="warningText">
+                    Can’t be blank
+                  </p>
                 </div>
                 <div className="year">
                   <p className="cardDetail">(MM/YY)</p>
@@ -179,6 +188,9 @@ function App(): JSX.Element {
                     max={33}
                     placeholder="YY"
                   />
+                  <p id="yearWarning" className="warningText">
+                    Can’t be blank
+                  </p>
                 </div>
                 <div className="cvc">
                   <p className="cardDetail">CVC</p>
@@ -193,6 +205,9 @@ function App(): JSX.Element {
                     min={0}
                     max={999}
                   />
+                  <p id="cvcWarning" className="warningText">
+                    Can’t be blank
+                  </p>
                 </div>
               </div>
             </div>
