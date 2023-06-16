@@ -230,6 +230,7 @@ input::placeholder {
     padding: 0px;
   }
   .header {
+    background-image: url(./asset/images/bg-main-desktop.png);
     width: 484px;
     height: 100%;
   }
