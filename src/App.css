@@ -271,7 +271,7 @@ input::placeholder {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 3.42222px;
-    top: calc(50% - 80px);
+    top: calc(50% - 100px);
     left: -40px;
   }
   .cardNameDate {
