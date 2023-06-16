@@ -16,31 +16,41 @@ function App(): JSX.Element {
   const [inputMonthValue, setInputMonthValue] = useState<String>("");
   const [inputYearValue, setInputYearValue] = useState<string>("");
   const [inputCvcValue, setInputCvcValue] = useState<string>("");
+  const nameWarning: any = document.getElementById("nameWarning");
+  const numberWarning: any = document.getElementById("numberWarning");
+  const monthWarning: any = document.getElementById("monthWarning");
+  const yearWarning: any = document.getElementById("yearWarning");
+  const cvcWarning: any = document.getElementById("cvcWarning");
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.id === "cardName") {
       setInputNameValue(event.target.value);
       if (event.target.value != "") {
         document.documentElement.style.setProperty("--name", "00FFFFFF");
+        nameWarning.style.display = "none";
       }
     } else if (event.target.id === "cardNumber") {
       setInputNumberValue(event.target.value);
       if (event.target.value.length == 16) {
         document.documentElement.style.setProperty("--cardNum", "00FFFFFF");
+        numberWarning.style.display = "none";
       }
     } else if (event.target.id === "month") {
       setInputMonthValue(event.target.value);
       if (event.target.value < "13" || event.target.value > "0") {
         document.documentElement.style.setProperty("--month", "00FFFFFF");
+        monthWarning.style.display = "none";
       }
     } else if (event.target.id === "year") {
       if (event.target.value < "34" || event.target.value > "22") {
         document.documentElement.style.setProperty("--year", "00FFFFFF");
+        yearWarning.style.display = "none";
       }
       setInputYearValue(event.target.value);
     } else if (event.target.id === "cvc") {
       setInputCvcValue(event.target.value);
       if (event.target.value.length == 3) {
         document.documentElement.style.setProperty("--cvc", "00FFFFFF");
+        cvcWarning.style.display = "none";
       }
     }
   };
@@ -49,26 +59,31 @@ function App(): JSX.Element {
     indicator = 0;
     if (inputNameValue == "") {
       document.documentElement.style.setProperty("--name", "#FF0000");
+      nameWarning.style.display = "block";
     } else {
       indicator++;
     }
     if (inputNumberValue.length != 16) {
       document.documentElement.style.setProperty("--cardNum", "#FF0000");
+      numberWarning.style.display = "block";
     } else {
       indicator++;
     }
     if (inputMonthValue > "12" || inputMonthValue < "1") {
       document.documentElement.style.setProperty("--month", "#FF0000");
+      monthWarning.style.display = "block";
     } else {
       indicator++;
     }
     if (inputYearValue > "33" || inputYearValue < "23") {
       document.documentElement.style.setProperty("--year", "#FF0000");
+      yearWarning.style.display = "block";
     } else {
       indicator++;
     }
     if (inputCvcValue.length != 3) {
       document.documentElement.style.setProperty("--cvc", "#FF0000");
+      cvcWarning.style.display = "block";
     } else {
       indicator++;
     }
@@ -85,7 +100,7 @@ function App(): JSX.Element {
       setCvc(inputCvcValue);
       setCard(true);
     } else {
-      alert(
+      console.log(
         "Please indicate correct information in the field with red outline color"
       );
     }
